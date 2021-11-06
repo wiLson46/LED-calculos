@@ -1,3 +1,4 @@
+/* js intereses */
 function fn1() {
     var ahorro = parseInt(document.getElementById("ingreso1").value);
     var porcentaje = parseInt(document.getElementById("ingreso2").value);
@@ -46,3 +47,20 @@ function fn3() {
     document.getElementById("resultado5").value = "";
     document.getElementById("resultado6").value = "";
 };
+
+/* switchear entre pestañas */
+
+function sw1() {
+    document.getElementById("ic").classList.remove("d-none");
+    document.getElementById("prop").classList.add("d-none");
+    document.getElementById("tab1").classList.add("active");
+    document.getElementById("tab2").classList.remove("active");
+};
+
+function sw2() {
+    document.getElementById("ic").classList.add("d-none");
+    document.getElementById("prop").classList.remove("d-none");
+    document.getElementById("tab1").classList.remove("active");
+    document.getElementById("tab2").classList.add("active");
+};
+

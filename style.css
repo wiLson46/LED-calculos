@@ -1,3 +1,7 @@
 .loguito {
     border-radius: 50%;
 }
+
+.damePointer {
+    cursor: pointer;
+}

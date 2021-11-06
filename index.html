@@ -33,10 +33,10 @@
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active">Interes Compuesto</a>
+                        <a id="tab1" class="nav-link damePointer active" onclick="sw1()">Interes Compuesto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Propinas</a>
+                        <a id="tab2" class="nav-link damePointer" onclick="sw2()">Propinas</a>
                     </li>
                 </ul>
 
@@ -44,7 +44,7 @@
         </div>
     </nav>
 
-    <div id="ic" class="container my-5 col-6">
+    <div id="ic" class="container my-5 col-12 col-lg-6">
         <input id="ingreso1" class="form-control form-control-lg my-3" type="text" placeholder="ahorro mensual">
         <input id="ingreso2" class="form-control form-control-lg my-3" type="text" placeholder="% de interes mensual">
         <input id="ingreso3" class="form-control form-control-lg my-3" type="text" placeholder="cantidad de meses">
@@ -53,7 +53,7 @@
         <button id="btn3" type="button" class="btn btn-warning btn-lg my-2 col-12" onclick="fn3()">Reset
             Results</button>
 
-        <fieldset disabled class="row align-items-center">
+        <fieldset disabled class="row align-items-center px-3 px-lg-0">
             <input type="text" id="resultado1" class="form-control col-lg col-sm-12 m-lg-3 my-2"
                 placeholder="Ingreso mensual">
             <input type="text" id="resultado2" class="form-control col-lg col-sm-12 m-lg-3 my-2"
@@ -61,7 +61,7 @@
             <input type="text" id="resultado3" class="form-control col-lg col-sm-12 m-lg-3 my-2"
                 placeholder="Total de meses">
         </fieldset>
-        <fieldset disabled class="row align-items-center">
+        <fieldset disabled class="row align-items-center px-3 px-lg-0">
             <input type="text" id="resultado4" class="form-control col-lg col-sm-12 m-lg-3 my-2"
                 placeholder="Total sin ganancia">
             <input type="text" id="resultado5" class="form-control col-lg col-sm-12 m-lg-3 my-2"
@@ -72,20 +72,33 @@
 
     </div>
 
-    <div id="prop" class="container my-5 col-6">
+    <div id="prop" class="container my-5 col-12 col-lg-6 px-3 d-none">
 
         <div class="input-group my-1">
             <span class="input-group-text" id="inputGasto">Ingrese el gasto</span>
             <input id="gasto" type="text" class="form-control">
         </div>
 
+        <input type="range" class="form-range" min="0" max="100" step="5" id="Range">
+
+        <div id="resultados" class="pt-4">
+            <h5>Resultados</h5>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">Monto de la propina</span>
+                    <input type="number" class="form-control" id="montoProp" disabled>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">Total con propina</span>
+                    <input type="number" class="form-control" id="totalConProp" disabled>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-
-
-
-
-
 
     <footer class="footer mt-auto">
         <div class="animated fadeIn delay-1s py-3 align-middle text-center">
