@@ -16,6 +16,8 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b84bdf459f.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="script2.js"></script>
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -36,7 +38,7 @@
                         <a id="tab1" class="nav-link damePointer active" onclick="sw1()">Interes Compuesto</a>
                     </li>
                     <li class="nav-item">
-                        <a id="tab2" class="nav-link damePointer" onclick="sw2()">Propinas</a>
+                        <a id="tab2" class="nav-link damePointer" onclick="sw2()">Salida</a>
                     </li>
                 </ul>
 
@@ -44,14 +46,18 @@
         </div>
     </nav>
 
-    <div id="ic" class="container my-5 col-12 col-lg-6">
+    <div id="ic" class="container my-1 col-12 col-lg-6 ">
+
+        <p class="fs-1">Interes compuesto</p>
+
         <input id="ingreso1" class="form-control form-control-lg my-3" type="text" placeholder="ahorro mensual">
         <input id="ingreso2" class="form-control form-control-lg my-3" type="text" placeholder="% de interes mensual">
         <input id="ingreso3" class="form-control form-control-lg my-3" type="text" placeholder="cantidad de meses">
-        <button id="btn1" type="button" class="btn btn-primary btn-lg my-2 col-12" onclick="fn1()">Calcular</button>
-        <button id="btn2" type="button" class="btn btn-danger btn-lg my-2 col-12" onclick="fn2()">Reset Fields</button>
-        <button id="btn3" type="button" class="btn btn-warning btn-lg my-2 col-12" onclick="fn3()">Reset
-            Results</button>
+        <button id="btn1" type="button" class="btn btn-secondary btn-lg my-2 col-12" onclick="fn1()">Calcular</button>
+        <button id="btn2" type="button" class="btn btn-secondary btn-lg my-2 col-12" onclick="fn2()">Reiniciar
+            Campos</button>
+        <button id="btn3" type="button" class="btn btn-secondary btn-lg my-2 col-12" onclick="fn3()">Reiniciar
+            Resultados</button>
 
         <fieldset disabled class="row align-items-center px-3 px-lg-0">
             <input type="text" id="resultado1" class="form-control col-lg col-sm-12 m-lg-3 my-2"
@@ -72,31 +78,55 @@
 
     </div>
 
-    <div id="prop" class="container my-5 col-12 col-lg-6 px-3 d-none">
+    <div id="prop" class="container my-1 col-12 col-lg-6 px-3 d-none">
+
+        <p class="fs-1">Calcular la propina</p>
+
+        <div id="alertaNO" class="alert alert-danger py-1 col-12 d-none" role="alert">
+            Se encontro un error con el numero ingresado. Ingrese uno nuevo.
+        </div>
 
         <div class="input-group my-1">
-            <span class="input-group-text" id="inputGasto">Ingrese el gasto</span>
-            <input id="gasto" type="text" class="form-control">
+            <span class="input-group-text">Ingrese el monto del ticket: $</span>
+            <input id="inputGasto" type="text" class="form-control">
         </div>
 
-        <input type="range" class="form-range" min="0" max="100" step="5" id="Range">
+        <p class="pt-4 fs-3">Propina (%)</p>
 
-        <div id="resultados" class="pt-4">
-            <h5>Resultados</h5>
-            <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon">Monto de la propina</span>
-                    <input type="number" class="form-control" id="montoProp" disabled>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon">Total con propina</span>
-                    <input type="number" class="form-control" id="totalConProp" disabled>
-                </div>
-            </div>
+        <div class="input-group my-1">
+            <span class="input-group-text">%</span>
+            <input id="inputPorc" type="text" class="form-control">
         </div>
+
+        <button id="btnCalc" type="button" class="btn btn-secondary btn-lg my-2 col-12"
+            onclick="funx()">Calcular</button>
+
+        <p class="pt-4 fs-3">Resultados</p>
+
+        <div class="input-group my-1">
+            <span class="input-group-text">Monto de la propina</span>
+            <input id="montoProp" type="text" class="form-control" disabled>
+        </div>
+
+        <div class="input-group my-1">
+            <span class="input-group-text">Total con propina</span>
+            <input id="totalConProp" type="text" class="form-control" disabled>
+        </div>
+
+        <p class="pt-4 fs-1">Dividir la cuenta</p>
+
+        <div class="input-group my-1">
+            <span class="input-group-text">Cantidad de comensales</span>
+            <input id="cantComensales" type="text" class="form-control">
+        </div>
+        <div class="input-group my-1">
+            <span class="input-group-text">Pago por comensal</span>
+            <input id="totalPorComensal" type="text" class="form-control" disabled>
+        </div>
+
+        <button id="btnCalc2" type="button" class="btn btn-secondary btn-lg my-2 col-12"
+            onclick="funx2()">Calcular</button>
+
 
     </div>
 
