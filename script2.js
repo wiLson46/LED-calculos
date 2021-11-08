@@ -30,3 +30,15 @@ function funx2() {
     final.value = parseInt(guardarFinal) / parseInt(comen);
 
 }
+
+function funclr() {
+
+    document.getElementById("inputGasto").value = "";
+    document.getElementById("inputPorc").value = "";
+    document.getElementById("montoProp").value = "";
+    document.getElementById("totalConProp").value = "";
+    document.getElementById("cantComensales").value = "";
+    document.getElementById("totalPorComensal").value = "";
+
+
+}
