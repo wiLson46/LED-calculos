@@ -27,6 +27,6 @@ function funx2() {
     var comen = document.getElementById("cantComensales").value;
     var final = document.getElementById("totalPorComensal");
 
-    final.value = 
+    final.value = parseInt(guardarFinal) / parseInt(comen);
 
 }
